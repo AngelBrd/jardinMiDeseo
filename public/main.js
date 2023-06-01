@@ -228,18 +228,15 @@ form.addEventListener("submit", function(event) {
               location.reload();
             });
           } else {
-            throw new Error('Envio de formulario');
+            throw new Error('Error con el envio del formulario');
           }
         }).catch(function(error) {
           // Mostrar la alerta de error
           Swal.fire({
-            title: 'Cotización Enviada',
-              text: 'Te contactaremos vía Whatsapp',
-              icon: 'success',
-              allowOutsideClick: false
-          }).then(function() {
-            // Reiniciar la página cuando se cierre la alerta de error
-            location.reload();
+            title: 'Error al enviar la cotización',
+            text: 'Por favor, inténtelo nuevamente',
+            icon: 'error',
+            allowOutsideClick: false
           });
         }).finally(function() {
           // Ocultar la alerta de carga
@@ -249,7 +246,6 @@ form.addEventListener("submit", function(event) {
     });
   }
 });
-
 
 //Funcion para desplegar los distintos checkboxes con otros servicios
 
