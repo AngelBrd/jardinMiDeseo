@@ -1,0 +1,199 @@
+@media (max-width:420px) {
+
+    .body-overflow_hidden {
+        overflow: hidden;
+    }
+
+    .section-logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .section-menu {
+        background-color: rgb(48, 25, 0);
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 90px;
+        width: 100%;
+        height: calc(100% - 90px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+    
+    .section-menu li {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+        font-size: 3.2rem;
+        line-height: 60px;
+        position: relative;
+        top: -50px;
+    }
+
+    header .bars-menu {
+        display: block;
+    }
+    
+
+    .nav-menu_visible {
+        left: 0%;
+    }
+
+    main .home-page {
+        width: 420px;
+        height: 840px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding-right: 50px;
+    }
+
+    main .home-page div {
+        margin-left: 15px;
+    }
+
+    main .home-page h1 {
+        width: 350px;
+        grid-row: 1;
+        font-size: 4rem;
+    }
+    
+    main .home-page h2 {
+        grid-row: 1;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    main #conocenos {
+        margin-top: 740px;
+    }
+
+    main .container-informacion {
+        height: 1100px;
+        width: 420px;
+    }
+    
+    main .container-informacion h1 {
+        padding-top: 80px;
+        margin-bottom: 10px;
+        font-size: 3.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    main .container-informacion .informacion {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        font-size: 2.1rem;
+        padding-right: 0;
+    }
+
+    main .container-informacion .informacion p {
+        letter-spacing: -0.1px;
+    }
+
+    main .container-informacion .informacion #my-video {
+        width: 340px;
+        height: 187px;
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        position: relative;
+        right: 10px;
+    }
+
+    main .titulo-eventos {
+        width: 370px;
+        font-size: 3.8rem;
+        margin-top: 100px;
+        padding-right: 40px;
+    }
+    
+    main .container-eventos .eventos {
+        height: 1080px;
+        width: 338px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-top: 50px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    main .container-eventos .eventos img {
+        width: 280px;
+        height: 180px;
+    }
+
+    main .container-eventos .xv {
+        border-radius: 10px 10px 0 0;
+    }
+
+    main .container-eventos .baby-shower {
+        border-radius: 0 0 10px 10px;
+    }
+
+    main .container-eventos .baby-shower img {
+        margin-top: 30px;
+    }
+
+    footer {
+        width: 420px;
+        height: 690px;
+        font-size: 1.8rem;
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        padding: 40px;
+        padding-top: 50px;
+    }
+
+    footer .section-left {
+        text-align: start;
+        margin-right: 20px;
+    }
+
+    footer .section-mid {
+        text-align: start;
+        grid-row: 2;
+        margin-top: 40px;
+    }
+
+    footer .section-mid .horario {
+        margin-right: 50px;
+    }
+
+    footer .section-mid .parrafo-cita {
+        text-align: start;
+    }
+
+    footer .section-right {
+        text-align: start;
+        grid-row: 3;
+    }
+
+    footer .section-right h3 {
+        margin-top: 40px;
+    }
+
+    footer .section-right .redes-sociales .icons {
+        align-items: start;
+    }
+
+    footer .section-right .redes-sociales .icons .facebook {
+        margin-bottom: 30px;
+    }
+
+    footer .section-right .redes-sociales .parrafos {
+        width: 300px;
+        text-align: start;
+    }
+    
+    footer .section-right .redes-sociales .parrafos .parrafo-jardin {
+        margin-bottom: 45px;
+    }
+    
+}

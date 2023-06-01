@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: whitesmoke;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    font-size: 2.2rem;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    word-wrap: break-word;
+    background-color: rgb(48, 25, 0);
+}
+
+header .bars-menu {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(-50%, -50%) scale(1.5);
+    cursor: pointer;
+    display: none;
+}
+
+header .bars-menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: whitesmoke;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 300ms;
+}
+
+.active_line1_bars-menu {
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.active_line2_bars-menu {
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.active_line3_bars-menu {
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+header a {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    color: rgb(239, 237, 233);
+}
+
+.section-menu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    border-radius: 4px;
+    background-color: rgb(239, 237, 233);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.section-menu a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.section-logo {
+    display: flex;
+    width: 70px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-logo img {
+    width: 55px;
+    height: 55px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.section-menu {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 140px;
+}
+
+.section-menu li {
+    display: inline-flex;
+    list-style: none;
+    padding-left: 50px;
+}
+
+main .home-page {
+    width: 100%;
+    height: 890px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    background-image: url(/archivosPrincipales/resources/jardinImg6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+}
+
+main .home-page div {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .home-page h1 {
+    text-align: center;
+    font-size: 6rem;
+    width: 600px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+main .home-page h2 {
+    font-size: 3rem;
+}
+
+main .home-page a {
+    color: rgb(48, 25, 0);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 110px;
+}
+
+main #conocenos {
+    margin-top: 730px;
+}
+
+main .container-informacion {
+    background-color: rgb(239, 237, 233);
+    color: rgb(48, 25, 0);
+    height: 850px;
+    width: 100%;
+}
+
+main .container-informacion h1 {
+    font-size: 4.5rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+    margin-bottom: 30px;
+}
+
+main .container-informacion .informacion {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    font-size: 2.5rem;
+    padding: 50px;
+    padding-bottom: 100px;
+}
+
+main .container-informacion .informacion p {
+    padding-right: 50px;
+    text-align: justify;
+}
+
+main .container-informacion .informacion #my-video {
+    float: right;
+    width: 700px;
+    height: 390px;
+    padding-left: 10px;
+    margin-top: 20px;
+} 
+
+main .background-eventos {
+    background-color: white;
+    color: rgb(48, 25, 0);
+    padding: 40px;
+}
+
+main .titulo-eventos {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+main .container-eventos .eventos {
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 100px;
+    padding-bottom: 500px;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+main .container-eventos img {
+    border-radius: 10px;
+    border: solid 1px rgb(48, 25, 0);
+}
+
+main .container-eventos .xv {
+    background-color: rgb(239, 237, 233);
+    border-radius: 10px 0 0 10px;
+    padding: 25px;
+}
+
+main .container-eventos .xv img {
+    width: 340px;
+    height: 220px;
+    margin-top: 35px;
+}
+
+main .container-eventos .bodas {
+    background-color: rgb(239, 237, 233);
+    padding: 25px;
+}
+
+main .container-eventos .bodas img {
+    width: 340px;
+    height: 220px;
+    margin-top: 35px;
+}
+
+main .container-eventos .baby-shower {
+    background-color: rgb(239, 237, 233);
+    border-radius: 0 10px 10px 0;
+    padding: 25px;
+}
+
+main .container-eventos .baby-shower img {
+    width: 340px;
+    height: 220px;
+    margin-top: 55px;
+}
+
+footer {
+    width: 100%;
+    height: 300px;
+    top: 2840px;
+    background-color: rgb(48, 25, 0);
+    font-size: 1.7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding: 40px;
+    padding-top: 70px;
+}
+
+footer .section-left h3 {
+    margin-bottom: 30px;
+}
+
+footer .section-left p {
+    padding-top: 10px;
+    font-size: 1.7rem;
+}
+
+footer .section-mid .horario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.8rem;
+}
+
+footer .section-mid h3 {
+    margin-bottom: 40px;
+}
+
+footer .section-mid h5 {
+    margin-bottom: 10px;
+}
+
+footer .section-mid .parrafo-cita {
+    font-size: 1.4rem;
+    margin-top: 30px;
+}
+
+footer .section-right h3 {
+    margin-bottom: 30px;
+}
+
+footer .section-right .redes-sociales {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+footer .section-right .redes-sociales a {
+    text-decoration: none;
+    color: rgb(239, 237, 233);
+}
+
+footer .section-right .redes-sociales .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 10px;
+}
+
+footer .section-right .redes-sociales .icons .facebook {
+    margin-bottom: 20px;
+}
+
+footer .section-right .redes-sociales .parrafos {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    margin-left: 20px;
+}
+
+footer .section-right .redes-sociales .parrafos .parrafo-jardin {
+    margin-bottom: 35px;
+}

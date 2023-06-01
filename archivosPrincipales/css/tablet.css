@@ -1,0 +1,145 @@
+@media (min-width:420px) and (max-width:1024px) {
+
+    .section-logo img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .section-menu {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 50px;
+    }
+    
+    .section-menu li {
+        font-size: 2rem;
+    }
+
+    main .home-page {
+        width: 100%;
+    }
+
+    main .container-informacion {
+        height: 1100px;
+        width: 100%;
+    }
+    
+    main .container-informacion h1 {
+        padding-top: 80px;
+        margin-bottom: 10px;
+        font-size: 3.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    main .container-informacion .informacion {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        font-size: 2.3rem;
+        padding-right: 0;
+    }
+
+    main .container-informacion .informacion p {
+        padding-right: 50px;
+    }
+    
+    main .container-informacion .informacion #my-video {
+        width: 655px;
+        height: 360px;
+        margin-top: -100px;
+        padding: 0;
+        display: flex;
+        
+    }
+
+    main .titulo-eventos {
+        width: 100%;
+        font-size: 3.8rem;
+        margin-top: 100px;
+    }
+    
+    main .container-eventos .eventos {
+        height: 1090px;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-top: 50px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 30px;
+    }
+
+    main .container-eventos .eventos img {
+        width: 280px;
+        height: 180px;
+    }
+
+    main .container-eventos .bodas {
+        padding: 70px;
+    }
+    
+    .alert-otros-servicios {
+        width: 400px;
+        height: 120px;
+        border-radius: 10px;
+        font-size: 18px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    footer {
+        width: 100%;
+        height: 690px;
+        font-size: 1.8rem;
+        margin-top: 150px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    footer .section-left {
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    footer .section-mid {
+        text-align: center;
+        grid-row: 2;
+        margin-top: 40px;
+    }
+
+    footer .section-mid .parrafo-cita {
+        text-align: center;
+    }
+
+    footer .section-right {
+        text-align: center;
+        grid-row: 3;
+    }
+
+    footer .section-right h3 {
+        margin-top: 40px;
+    }
+
+    footer .section-right .redes-sociales .icons {
+        align-items: center;
+        margin-left: 250px;
+    }
+
+    footer .section-right .redes-sociales .icons .facebook {
+        margin-bottom: 30px;
+    }
+
+    footer .section-right .redes-sociales .parrafos {
+        width: 300px;
+        text-align: center;
+    }
+    
+    footer .section-right .redes-sociales .parrafos .parrafo-jardin {
+        margin-bottom: 45px;
+    }
+    
+}
