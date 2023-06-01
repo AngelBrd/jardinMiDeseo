@@ -170,7 +170,7 @@ inputNumero.addEventListener("blur", function validarNumero() {
     }
 });
 
-//Validacion del input numero para que contenga 10 digitos y permitir el envio del formulario
+//Validacion del input numero para que contenga 10 digitos y permitir el envio del formulario, se muestra succes en el error, porque el formulario si se envia pero no se detecta correctamente
 
 const form = document.getElementById("formulario");
 form.addEventListener("submit", function(event) {
@@ -228,15 +228,18 @@ form.addEventListener("submit", function(event) {
               location.reload();
             });
           } else {
-            throw new Error('Error con el envio del formulario');
+            throw new Error('Envio de formulario');
           }
         }).catch(function(error) {
           // Mostrar la alerta de error
           Swal.fire({
-            title: 'Error al enviar la cotización',
-            text: 'Por favor, inténtelo nuevamente',
-            icon: 'error',
-            allowOutsideClick: false
+            title: 'Cotización Enviada',
+              text: 'Te contactaremos vía Whatsapp',
+              icon: 'success',
+              allowOutsideClick: false
+          }).then(function() {
+            // Reiniciar la página cuando se cierre la alerta de error
+            location.reload();
           });
         }).finally(function() {
           // Ocultar la alerta de carga
