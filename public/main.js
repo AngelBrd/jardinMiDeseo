@@ -170,7 +170,7 @@ inputNumero.addEventListener("blur", function validarNumero() {
     }
 });
 
-//Validacion del input numero para que contenga 10 digitos y permitir el envio del formulario
+//Validacion del input numero para que contenga 10 digitos y permitir el envio del formulario, se muestra succes en el error, porque el formulario si se envia pero no se detecta correctamente
 
 const form = document.getElementById("formulario");
 form.addEventListener("submit", function(event) {
@@ -249,7 +249,6 @@ form.addEventListener("submit", function(event) {
     });
   }
 });
-
 
 //Funcion para desplegar los distintos checkboxes con otros servicios
 
