@@ -15,7 +15,7 @@
     }
     
     .section-menu li {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     main .home-page {
@@ -46,14 +46,28 @@
         padding-right: 50px;
     }
     
-    main .container-informacion .informacion #my-video {
-        width: 655px;
-        height: 360px;
-        margin-top: -100px;
-        padding: 0;
-        display: flex;
-        
-    }
+    .carousel {
+        width: 620px;
+        height: 400px;
+        margin-top: 0px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+        left: 20px;
+        bottom: 340px;
+      }
+      
+      button {
+        padding: 5px 10px;
+        margin-top: 150px;
+        background-color: transparent;
+        border: none;
+        color: whitesmoke;
+      }
+    
+      #nextBtn {
+        left: 490px;
+      }
 
     main .titulo-eventos {
         width: 100%;
@@ -93,9 +107,9 @@
 
     footer {
         width: 100%;
-        height: 690px;
+        height: 740px;
         font-size: 1.8rem;
-        margin-top: 150px;
+        margin-top: 170px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     }
@@ -139,7 +153,7 @@
     }
     
     footer .section-right .redes-sociales .parrafos .parrafo-jardin {
-        margin-bottom: 45px;
+        margin-bottom: 30px;
     }
     
 }

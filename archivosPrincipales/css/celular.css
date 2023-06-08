@@ -45,7 +45,7 @@
 
     main .home-page {
         width: 420px;
-        height: 840px;
+        height: 900px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         padding-right: 50px;
@@ -68,17 +68,17 @@
     }
 
     main #conocenos {
-        margin-top: 740px;
+        margin-top: 810px;
     }
 
     main .container-informacion {
-        height: 1100px;
+        height: 1200px;
         width: 420px;
     }
     
     main .container-informacion h1 {
         padding-top: 80px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         font-size: 3.5rem;
         display: flex;
         justify-content: center;
@@ -87,7 +87,7 @@
     main .container-informacion .informacion {
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 1fr;
-        font-size: 2.1rem;
+        font-size: 2rem;
         padding-right: 0;
     }
 
@@ -95,15 +95,26 @@
         letter-spacing: -0.1px;
     }
 
-    main .container-informacion .informacion #my-video {
-        width: 340px;
-        height: 187px;
+    .carousel {
+        width: 320px;
+        height: 200px;
         margin-top: 30px;
-        padding: 0;
-        display: flex;
+        overflow: hidden;
         position: relative;
-        right: 10px;
-    }
+        border-radius: 10px;
+      }
+      
+      button {
+        padding: 5px 10px;
+        margin-top: 65px;
+        background-color: transparent;
+        border: none;
+        color: whitesmoke;
+      }
+    
+      #nextBtn {
+        left: 190px;
+      }
 
     main .titulo-eventos {
         width: 370px;
@@ -142,13 +153,17 @@
 
     footer {
         width: 420px;
-        height: 690px;
-        font-size: 1.8rem;
-        margin-top: 20px;
+        height: 810px;
+        font-size: 1.9rem;
+        margin-top: 80px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         padding: 40px;
-        padding-top: 50px;
+        padding-top: 80px;
+    }
+
+    footer h3 {
+        font-size: 1.7rem;
     }
 
     footer .section-left {
@@ -160,6 +175,10 @@
         text-align: start;
         grid-row: 2;
         margin-top: 40px;
+    }
+
+    footer .section-mid h5 {
+        font-size: 1.5rem;
     }
 
     footer .section-mid .horario {
@@ -193,7 +212,7 @@
     }
     
     footer .section-right .redes-sociales .parrafos .parrafo-jardin {
-        margin-bottom: 45px;
+        margin-bottom: 35px;
     }
     
 }

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-************" crossorigin="anonymous" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="celular.css">
     <link rel="stylesheet" href="tablet.css">
-    <title>Jardin Mi Deseo</title>
+    <title>Jardin de Eventos | Mi Deseo</title>
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2926/2926745.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +37,7 @@
     </header>
     <main>
         <section class="home-page">
+            <video class="home-page-video" src="VideoJardin.mp4" autoplay muted loop></video>
             <div data-aos="fade-up" data-aos-duration="1000">
                 <h1>Jardín "Mi Deseo"</h1>
                 <h2>Te aseguramos que disfrutarás de tu evento</h2>
@@ -46,8 +48,19 @@
     <section class="container-informacion">
         <h1 data-aos="fade-down" data-aos-duration="1000">¿Quiénes somos?</h1>
         <div data-aos="fade-up" data-aos-duration="1000" class="informacion">
-        <p>¡Te damos la bienvenida a nuestro encantador jardín de eventos! Aquí, te invitamos a descubrir un lugar excepcional donde la naturaleza y la elegancia se fusionan para crear momentos inolvidables. Aunque no contamos con una gran cantidad de flores, nuestros cuidados para el jardin están meticulosamente diseñados para resaltar la belleza de cada rincón. Nuestro jardín es el escenario perfecto para celebrar tus ocasiones especiales, rodeado de exuberante vegetación y atmósfera serena. Nos complace abrir nuestras puertas y ofrecerte un lugar excepcional para tus eventos. ¡Ven a conocernos y descubre la magia que Jardin de Eventos "Mi Deseo" tiene para ofrecerte!.</p>
-         <video data-aos="flip-up" data-aos-duration="1000" id="my-video" class="video-js" controls preload="auto" data-setup="{}" src="Video Jardin.mp4" controls></video>      
+        <p>¡Te damos la bienvenida a nuestro encantador jardín de eventos! Aquí, te invitamos a descubrir un lugar excepcional donde la naturaleza y la elegancia se fusionan para crear momentos inolvidables. Nuestros cuidados meticulosamente diseñados resaltan la belleza de cada rincón, convirtiendo nuestro jardín en el escenario perfecto para celebrar cualquier tipo de evento. Ya sea una boda romántica, un evento empresarial, una reunión familiar o cualquier ocasión especial, estamos preparados para hacer de tu evento una experiencia única. Nos complace abrir nuestras puertas y ofrecerte un lugar excepcional para tus eventos. ¡Ven a conocernos y descubre la magia que Jardín de Eventos "Mi Deseo" tiene para ofrecerte!</p>
+        <div data-aos="fade-up" data-aos-duration="1000" class="carousel">
+            <img class="slide" src="jardinImg1.jpg">
+            <img class="slide" src="jardinImg2.jpg">
+            <img class="slide" src="jardinImg3.jpg">
+            <img class="slide" src="jardinImg4.jpg">
+            <img class="slide" src="jardinImg6.jpg">
+            <img class="slide" src="jardinImg11.jpg">
+            <div class="controls">
+                <button id="prevBtn" class="fas fa-chevron-left fa-3x"></button>
+                <button id="nextBtn" class="fas fa-chevron-right fa-3x"></button>
+            </div>
+        </div>
     </section>
     <p id="eventos"></p>
     <div class="background-eventos">
@@ -109,7 +122,6 @@
             </section>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
     <script src="button_menu.js" defer></script>
 </body>
 </html>

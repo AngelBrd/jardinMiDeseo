@@ -48,3 +48,34 @@ const contactanos = document.querySelector(".contactanos")
         } else {
             menu.setAttribute("aria-label", "Abrir menu");
         }
+
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+        let intervalId;
+        
+        function showSlide(index) {
+          slides[currentSlide].className = 'slide';
+          currentSlide = (index + slides.length) % slides.length;
+          slides[currentSlide].className = 'slide active';
+        }
+        
+        function nextSlide() {
+          showSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+          showSlide(currentSlide - 1);
+        }
+        
+        document.getElementById('nextBtn').addEventListener('click', () => {
+          clearInterval(intervalId);
+          nextSlide();
+        });
+        
+        document.getElementById('prevBtn').addEventListener('click', () => {
+          clearInterval(intervalId);
+          prevSlide();
+        });
+        
+        intervalId = setInterval(nextSlide, 2000);
+        
