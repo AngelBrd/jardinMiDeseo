@@ -22,43 +22,23 @@
         </header>
     <main>
     <div class="container" data-aos="fade-down" data-aos-duration="1000">
-    <table class="table" border="1">
     <form name="formulario" id="formulario" action="https://formsubmit.co/jardinmideseo@gmail.com"
     method="POST">
-    <tr>
-        <td>
-            <label for="">Nombre</label>
-        </td>
-        <td>
-            <input type="text" name="Nombre" id="form_cliente" required>
-        </td>
-    </tr>
-        <tr>
-            <td><label for="form_cliente">Número de Celular</label></td>
-            <td>
-                <input type="number" name="Celular" id="form_celular_cliente" class="input-celular" min="0" max="9999999999" required>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="">Tipo de Evento</label></td>
-            <td>
+            <input type="text" name="Nombre" id="form_cliente" placeholder="Nombre" required>
+                <input type="number" name="Celular" id="form_celular_cliente" class="input-celular" placeholder="Número de celular" required>
                 <select name="Tipo de Evento" id="form_tipo_evento" required>
-                    <option></option>
+                    <option disabled selected>Tipo de Evento</option>
                     <option>Fiesta de Cumpleaños</option>
                     <option>Bautizo</option>
                     <option>Primera Comunion</option>
-                    <option>Confirmacion</option>
+                    <option>Graduacion</option>
                     <option>Baby Shower</option>
                     <option>XV Años</option>
                     <option>Boda</option>
                     <option>Otro</option>
                 </select>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="form_personas" name="form_personas">Número de personas</label></td>
-            <td>
                 <select name="Numero de personas" id="form_personas" onchange="actualizarPrecio()">
+                    <option disabled selected>Número de personas</option>
                     <option value="30">30</option>
                     <option value="40">40</option>
                     <option value="50">50</option>
@@ -73,58 +53,24 @@
                     <option value="140">140</option>
                     <option value="150">150</option>
                   </select>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="paquete">Paquetes</label></td>
-            <td>
                 <select id="paquete" name="Paquete" onchange="actualizarPrecio()">
+                    <option value="" disabled selected>Tipo de paquete</option>
                     <option value="1">Paquete 1</option>
                     <option value="2">Paquete 2</option>
                   </select>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="precio-paquete">Precio del Paquete</label></td>
-            <td>
-                <input id="precio" name="precio-paquete" type="number" value="" autocomplete="off" readonly>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="">El Paquete incluye:</label></td>
-            <td>
-                <textarea id="descripcion" rows="6" name="Servicios" readonly></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="" name="form_horas" id="form_horas">Horas extra</label></td>
-            <td>
-                <select id="horas_extra" name="Horas extra" onchange="actualizarPrecioHorasExtra()">
+                <input id="precio" name="precio-paquete" type="text" value="" autocomplete="off" placeholder="Precio del paquete" readonly>
+                <textarea class="descripcion" id="descripcion" rows="6" name="Servicios" placeholder="Descripcion del paquete" readonly></textarea>
+                <select id="horas_extra" name="Horas extra" onchange="llenarPrecioHorasExtra(this.value)">
+                    <option disabled selected>Horas extra</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="">Precio horas extra</label></td>
-            <td>
-                <input id="precio_horas_extra" name="precio_horas_extra" type="text" oninput="validarInputs()" readonly>
-            </td>
-            <tr>
-                <td><label>Fecha deseada</label></td>
-                <td>
-                    <input type="date" name="Fecha" id="form_date" required>
-                </td>
-            </tr>
-        </tr>
-        <tr>
-            <td><label for="otros-servicios">Otros Servicios</label>
-                </td>
-                <td>
-                    <button type="button" class="botonServicios btn btn-secondary btn-lg" onclick="toggleCheckboxes()">Mostrar/ocultar</button>
+                <input id="precio_horas_extra" name="precio_horas_extra" type="text" oninput="validarInputs()" placeholder="Precio horas extra" readonly>
+                <input type="date" name="Fecha" id="form_date" placeholder="Fecha deseada" required>
+                    <button type="button" id="toggleButton" class="botonServicios btn btn-secondary btn-lg" onclick="toggleCheckboxes()">Otros Servicios</button>
                   <div id="checkboxContainer" class="checkbox-container" style="display: none;">
                     <label for="opcion1">
                       <input type="checkbox" id="opcion1" class="checkbox" name="Banquetes">Banquetes</label>
@@ -155,22 +101,18 @@
                       <br>
                     <label for="opcion10">
                       <input type="checkbox" id="opcion10" class="checkbox" name="DJ">DJ</label>
-                </td>
-        </tr>
-        <tr>
-            <td colspan="2">
+                    </div>
             <div class="buttons">
-                <button type="button" name="botonCalcular" class="botonCalcular btn btn-primary btn-lg" id="boton" onclick="calcularTotal()">Calcular Total</button>
-                <button type="submit" id="botonEnviar" class="botonEnviar btn btn-success btn-lg" >Enviar</button>
+                <button type="button" name="botonCalcular" class="botonCalcular btn btn-lg" id="boton" onclick="calcularTotal()">Calcular Total</button>
+                <button type="submit" id="botonEnviar" class="botonEnviar btn btn-lg" >Enviar</button>
             </div>
-            </td>
-        </tr>
-    </table>
             <input type="hidden" name="_next" value="http://127.0.0.1:5500/archivosPrincipales/html/cotizaTuEvento.html">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
+            <div class="volver">
+            <a href="index.html">Volver a la página principal</a>
+            </div>
     </form> 
-    <a href="index.html">Volver a la página principal</a>
     </div>
     </main>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

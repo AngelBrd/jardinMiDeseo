@@ -58,8 +58,8 @@ var precios = {
 };
 
 var descripciones = {
-  "1": "Por 7 horas.\nJardín con área de asador, refrigerador, horno de microondas, baños mujeres, baños hombres.\nLona 10x15m.\nMesas con mantel.\nSillas.\n1 tablón con mantel (blanco) y sillas para mesa principal.",
-  "2": "Por 7 horas.\nJardín con área de asador, refrigerador, horno de microondas, baños mujeres, baños hombres.\nLona 10x15m.\nMesas con mantel (blanco) y cubre mantel (color a elegir).\nSillas con fundas (blancas) y bandas (color a elegir).\n1 tablón con mantel y sillas para mesa principal."
+  "1": "El Paquete 1 incluye: \n• Uso por 7 horas.\n• Jardín con área de asador, refrigerador, horno de microondas, baños mujeres, baños hombres.\n• Lona 10x15m.\n• Mesas con mantel.\n• Sillas.\n• 1 tablón con mantel (blanco) y sillas para mesa principal.",
+  "2": "El Paquete 2 incluye: \n• Uso por 7 horas.\n• Jardín con área de asador, refrigerador, horno de microondas, baños mujeres, baños hombres.\n• Lona 10x15m.\n• Mesas con mantel (blanco) y cubre mantel (color a elegir).\n• Sillas con fundas (blancas) y bandas (color a elegir).\n• 1 tablón con mantel y sillas para mesa principal."
 };
 
 //AQUI SE EJECUTA EL LLENADO AUTOMATICO DE LOS INPUTS
@@ -68,57 +68,34 @@ function actualizarPrecio() {
   var personas = document.getElementById("form_personas").value;
   var paquete = document.getElementById("paquete").value;
   
-  var precio = precios[personas][paquete] || 0;
+  var precio = "";
+  if (personas && paquete) {
+    precio = precios[personas] ? precios[personas][paquete] || "Precio del Paquete" : "Precio del Paquete";
+  }
+  
   var descripcion = descripciones[paquete] || "";
   
   document.getElementById("precio").value = precio;
   document.getElementById("descripcion").value = descripcion;
 }
 
-actualizarPrecio();
 
-var preciosHorasExtra = {
-  "0": 0,
-  "1": 200,
-  "2": 400,
-  "3": 600,
-  "4": 800
-};
+function llenarPrecioHorasExtra(seleccion) {
+  let precioHorasExtraInput = document.getElementById('precio_horas_extra');
 
-function actualizarPrecioHorasExtra() {
-  var horasExtra = document.getElementById("horas_extra").value;
-  var precioHorasExtra = preciosHorasExtra[horasExtra] || 0;
-  
-  document.getElementById("precio_horas_extra").value = precioHorasExtra;
-  validarInputs();
+  const precios = {
+    '0': 0,
+    '1': 200,
+    '2': 400,
+    '3': 600,
+    '4': 800
+  };
+
+  precioHorasExtraInput.placeholder = seleccion ? "" : "Precio horas extra";
+  precioHorasExtraInput.value = seleccion !== undefined ? precios[seleccion] || 0 : 0;
 }
 
 //CREACION DE ALERTA PERSONALIZADA (pendiente)
-
-//AQUI SE CARGA POR DEFECTO EL PRECIO DE HORAS EXTRA PARA PODER UTILIZAR EL BOTON DE CALCULAR TOTAL
-
-window.addEventListener('DOMContentLoaded', function() {
-  var horasExtraSelect = document.getElementById('horas_extra');
-  var precioHorasExtraInput = document.getElementById('precio_horas_extra');
-  var botonCalcular = document.getElementById('boton');
-
-  horasExtraSelect.addEventListener('change', function() {
-    actualizarPrecioHorasExtra();
-  });
-
-  horasExtraSelect.addEventListener('focus', function() {
-    if (horasExtraSelect.value === '') {
-      horasExtraSelect.value = '0';
-      precioHorasExtraInput.value = '0';
-    }
-  });
-
-  actualizarPrecioHorasExtra();
-
-  botonCalcular.addEventListener('click', function() {
-    calcularTotal();
-  });
-});
 
 function validarInputs() {
   var precioPaquete = document.getElementById('precio').value;
@@ -135,6 +112,18 @@ function validarInputs() {
 function calcularTotal() {
   var precioPaquete = document.getElementById('precio').value;
   var precioHorasExtra = document.getElementById('precio_horas_extra').value;
+
+  if (precioHorasExtra === "") {
+    Swal.fire({
+      title: "Por favor, seleccione el número de horas extra",
+      icon: "warning",
+      customClass: {
+        confirmButton: "boton-alerta-horas-extra"
+      },
+    });
+    return; // Detener la ejecución de la función si no se han seleccionado horas extras
+  }
+
   var total = parseInt(precioPaquete) + parseInt(precioHorasExtra);
 
   Swal.fire({
@@ -146,8 +135,8 @@ function calcularTotal() {
       popup: "alert-total"
     }
   });
-  
 }
+
 
 
 //AQUI VALIDAMOS SI LA LONGITUD DEL NUMERO CELULAR ES DE 10
@@ -170,7 +159,7 @@ inputNumero.addEventListener("blur", function validarNumero() {
     }
 });
 
-//Validacion del input numero para que contenga 10 digitos y permitir el envio del formulario, se muestra succes en el error, porque el formulario si se envia pero no se detecta correctamente
+//Validacion del input numero para que contenga 10 digitos y permitir el envio del formulario
 
 const form = document.getElementById("formulario");
 form.addEventListener("submit", function(event) {
@@ -193,7 +182,7 @@ form.addEventListener("submit", function(event) {
 
     // Mostrar la alerta de confirmación
     Swal.fire({
-      title: '¿Está segur@ que desea enviar su cotizacion?',
+      title: '¿Desea enviar su cotizacion?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -250,6 +239,7 @@ form.addEventListener("submit", function(event) {
   }
 });
 
+
 //Funcion para desplegar los distintos checkboxes con otros servicios
 
 function toggleCheckboxes() {
@@ -257,17 +247,20 @@ function toggleCheckboxes() {
   var isHidden = container.style.display === "none";
   container.style.display = isHidden ? "block" : "none";
   
+  var boton = document.getElementById("toggleButton");
+  boton.textContent = isHidden ? "Ocultar" : "Otros Servicios"; // Cambiar el texto del botón
+  
   if (isHidden) {
     Toastify({
       text: "Se le enviará más información vía Whatsapp en caso de seleccionar otros servicios",
       duration: 5500,
-      style:{
-        background: "blue"
+      style: {
+        background: "#6c757d"
       },
       className: "alert-otros-servicios"
-
     }).showToast();
   }
 }
+
 
 

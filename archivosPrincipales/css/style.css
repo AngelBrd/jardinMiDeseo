@@ -15,6 +15,7 @@ body {
 
 header {
     width: 100%;
+    height: 90px;
     display: flex;
     font-size: 2.2rem;
     position: fixed;
@@ -22,6 +23,7 @@ header {
     top: 0;
     word-wrap: break-word;
     background-color: rgb(48, 25, 0);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
 }
 
 header .bars-menu {
@@ -91,7 +93,7 @@ header a:hover {
 .section-logo {
     display: flex;
     width: 70px;
-    height: 100px;
+    height: 80px;
     justify-content: center;
     align-items: center;
 }
@@ -126,6 +128,7 @@ main .home-page {
     justify-content: center;
     font-family: 'Lora', serif;
     padding: 30px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
 }
 
 main .home-page .home-page-video {
@@ -139,6 +142,7 @@ main .home-page .home-page-video {
 }
 
 main .home-page div {
+    color: rgb(241, 184, 40);
     position: relative;
     z-index: 1;
     padding-top: 80px;
@@ -189,7 +193,7 @@ main .container-informacion .informacion {
     width: 100%;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     padding: 50px;
     padding-bottom: 100px;
 }
@@ -200,9 +204,9 @@ main .container-informacion .informacion p {
 }
 
 .carousel {
-    width: 600px;
+    width: 640px;
     height: 400px;
-    margin-top: 20px;
+    margin-top: 10px;
     overflow: hidden;
     position: relative;
     border-radius: 10px;
@@ -226,7 +230,7 @@ main .container-informacion .informacion p {
   
   button {
     padding: 5px 10px;
-    margin-top: 160px;
+    margin-top: 200px;
     background-color: transparent;
     border: none;
     color: whitesmoke;
@@ -243,13 +247,14 @@ main .container-informacion .informacion p {
   #nextBtn {
     border-radius: 10px;
     position: relative;
-    left: 460px;
+    left: 640px;
   }
 
 main .background-eventos {
     background-color: white;
     color: rgb(48, 25, 0);
     padding: 40px;
+    box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.3);
 }
 
 main .titulo-eventos {
@@ -324,6 +329,11 @@ footer {
     text-align: center;
     padding: 40px;
     padding-top: 70px;
+    box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.3);
+}
+
+footer h3 {
+    font-size: 2.1rem;
 }
 
 footer .section-left h3 {
