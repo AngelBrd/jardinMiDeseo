@@ -45,7 +45,7 @@
 
     main .home-page {
         width: 420px;
-        height: 900px;
+        height: 880px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         padding-right: 50px;

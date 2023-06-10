@@ -25,9 +25,9 @@
     <form name="formulario" id="formulario" action="https://formsubmit.co/jardinmideseo@gmail.com"
     method="POST">
             <input type="text" name="Nombre" id="form_cliente" placeholder="Nombre" required>
-                <input type="number" name="Celular" id="form_celular_cliente" class="input-celular" placeholder="Número de celular" required>
+                <input type="number" name="Celular" id="form_celular_cliente" class="input-celular" placeholder="Celular" required>
                 <select name="Tipo de Evento" id="form_tipo_evento" required>
-                    <option disabled selected>Tipo de Evento</option>
+                    <option disabled selected>Evento</option>
                     <option>Fiesta de Cumpleaños</option>
                     <option>Bautizo</option>
                     <option>Primera Comunion</option>
@@ -38,7 +38,7 @@
                     <option>Otro</option>
                 </select>
                 <select name="Numero de personas" id="form_personas" onchange="actualizarPrecio()">
-                    <option disabled selected>Número de personas</option>
+                    <option disabled selected>Invitados</option>
                     <option value="30">30</option>
                     <option value="40">40</option>
                     <option value="50">50</option>
@@ -54,11 +54,11 @@
                     <option value="150">150</option>
                   </select>
                 <select id="paquete" name="Paquete" onchange="actualizarPrecio()">
-                    <option value="" disabled selected>Tipo de paquete</option>
+                    <option value="" disabled selected>Paquete</option>
                     <option value="1">Paquete 1</option>
                     <option value="2">Paquete 2</option>
                   </select>
-                <input id="precio" name="precio-paquete" type="text" value="" autocomplete="off" placeholder="Precio del paquete" readonly>
+                <input id="precio" name="precio-paquete" type="text" value="" autocomplete="off" placeholder="Precio" readonly>
                 <textarea class="descripcion" id="descripcion" rows="6" name="Servicios" placeholder="Descripcion del paquete" readonly></textarea>
                 <select id="horas_extra" name="Horas extra" onchange="llenarPrecioHorasExtra(this.value)">
                     <option disabled selected>Horas extra</option>
