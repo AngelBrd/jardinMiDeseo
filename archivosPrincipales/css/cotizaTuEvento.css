@@ -10,7 +10,10 @@ html {
 
 body {
     font-family: 'Lora', serif;
-    background-color: whitesmoke;
+    background-image: url("/jardinMiDeseo/archivosPrincipales/resources/jardinImg6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 header {
@@ -55,7 +58,7 @@ header {
     padding: 27px;
     border-radius: 15px;
     font-size: 2rem;
-    margin-top: 20px;
+    margin-top: 90px;
     margin-bottom: 20px;
     background-color: rgb(239, 237, 233);
     box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.3);
@@ -197,7 +200,6 @@ input[type=number] { appearance:textfield; }
 @media (max-width: 420px) {
     body {
         width: 420px;
-
     }
 
     .section-title .title {
@@ -205,9 +207,9 @@ input[type=number] { appearance:textfield; }
     }
 
     .container {
-        width: 415px;
+        width: 100%;
         left: 0;
-        margin-top: 50px;
+        margin-top: 60px;
     }
 
     .container input {
