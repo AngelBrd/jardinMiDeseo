@@ -230,7 +230,7 @@ main .container-informacion .informacion p {
   
   button {
     padding: 5px 10px;
-    margin-top: 200px;
+    margin-top: 160px;
     background-color: transparent;
     border: none;
     color: whitesmoke;
@@ -247,7 +247,7 @@ main .container-informacion .informacion p {
   #nextBtn {
     border-radius: 10px;
     position: relative;
-    left: 640px;
+    left: 500px;
   }
 
 main .background-eventos {
