@@ -207,11 +207,9 @@ input[type=number] { appearance:textfield; }
     }
 
     .container {
-        width: auto;
+        width: 98%;
         left: 0;
-        margin-top: 15px;
-        margin-right: 0;
-        margin-left: 0;
+        margin-top: 50px;
     }
 
     .container input {
