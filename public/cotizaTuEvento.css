@@ -210,6 +210,8 @@ input[type=number] { appearance:textfield; }
         width: 100%;
         left: 0;
         margin-top: 60px;
+        margin-right: 0;
+        margin-left: 0;
     }
 
     .container input {
