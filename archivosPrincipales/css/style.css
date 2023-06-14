@@ -271,6 +271,7 @@ main .container-eventos {
 
 main .titulo-eventos {
     width: 100%;
+    color: rgb(48, 25, 0);
     font-size: 4.5rem;
     text-align: center;
     margin-top: 100px;
