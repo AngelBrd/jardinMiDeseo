@@ -1,4 +1,4 @@
-@media (max-width:420px) {
+@media (max-width:695px) {
 
     .body-overflow_hidden {
         overflow: hidden;
@@ -45,7 +45,7 @@
 
     main .home-page {
         width: 100%;
-        height: 90%;
+        height: 800px;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         padding-right: 50px;
@@ -68,12 +68,11 @@
     }
 
     main #conocenos {
-        margin-top: 760px;
+        top: 720px;
     }
 
     main .container-informacion {
         height: 1200px;
-        
     }
     
     main .container-informacion h1 {
@@ -116,11 +115,19 @@
         left: 198px;
       }
 
+    #eventos {
+        bottom: 20px;
+    }
+
+    main .container-eventos {
+        height: 1300px;
+    }
+
     main .titulo-eventos {
         width: 370px;
         font-size: 3.8rem;
         margin-top: 100px;
-        padding-right: 40px;
+        padding-right: 20px;
     }
     
     main .container-eventos .eventos {
@@ -215,4 +222,57 @@
         margin-bottom: 35px;
     }
     
+}
+
+@media (min-width: 310px) and (max-width: 400px) {
+
+    header {
+        width: 100%;
+    }
+
+    main .home-page {
+        height: 650px;
+    }
+
+    main #conocenos {
+        top: 600px;
+    }
+
+    main .container-informacion {
+        width: 100%;
+        height: 1280px;
+    }
+
+    .carousel {
+        width: 290px;
+        height: 180px;
+      }
+
+      button {
+        padding: 5px 5px;
+        margin-top: 60px;
+      }
+    
+      #nextBtn {
+        left: 187px;
+      }
+
+    main .container-eventos {
+        width: 100%;
+        height: 1300px;
+    }
+
+    main .container-eventos .eventos {
+        margin-left: 16px;
+    }
+
+    main .titulo-eventos {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    footer {
+        width: 100%;
+        height: 800px;
+    }
 }

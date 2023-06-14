@@ -129,16 +129,18 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] { appearance:textfield; }
 
 .container .buttons {
-    display: flex;
-    width: 100%;
-    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 0;
 }
 
 .container .buttons .botonCalcular {
     width: 200px;
     height: 50px;
     font-size: 1.8rem;
-    margin-left: -20px;
     background-color: rgb(48, 25, 0);
     color: whitesmoke;
 }
@@ -147,7 +149,6 @@ input[type=number] { appearance:textfield; }
     width: 200px;
     height: 50px;
     font-size: 1.8rem;
-    margin-left: 200px;
     background-color: black;
     color: whitesmoke;
 }
@@ -207,7 +208,7 @@ input[type=number] { appearance:textfield; }
     }
 
     .container {
-        width: 98%;
+        width: 100%;
         left: 0;
         margin-top: 50px;
     }

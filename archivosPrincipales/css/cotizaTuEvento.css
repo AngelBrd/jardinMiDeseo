@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: 'Lora', serif;
-    background-image: url("jardinImg6.jpg");
+    background-image: url("/jardinMiDeseo/archivosPrincipales/resources/jardinImg6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -207,7 +207,7 @@ input[type=number] { appearance:textfield; }
     }
 
     .container {
-        width: 98%;
+        width: 100%;
         left: 0;
         margin-top: 50px;
     }
