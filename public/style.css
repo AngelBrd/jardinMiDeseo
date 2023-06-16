@@ -13,19 +13,6 @@ body {
     color: whitesmoke;
 }
 
-header {
-    width: 100%;
-    height: 90px;
-    display: flex;
-    font-size: 2.2rem;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    word-wrap: break-word;
-    background-color: rgb(48, 25, 0);
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
-}
-
 header .bars-menu {
     width: 30px;
     height: 30px;
@@ -90,127 +77,158 @@ header a:hover {
     transform: scaleX(1);
 }
 
-.section-logo {
-    display: flex;
-    width: 70px;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-}
-
-.section-logo img {
-    width: 55px;
-    height: 55px;
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
-.section-menu {
-    display: flex;
+header {
     width: 100%;
-    height: 100px;
-    justify-content: center;
+    height: 90px;
+    position:fixed;
+    display: flex;
     align-items: center;
-    margin-right: 140px;
+    justify-content: space-between;
+    background-color: rgb(48, 25, 0);
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 4px black;
+}
+
+header .divLogo {
+    width: 10%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-top: .5rem;
+    margin-right: 10%;
+}
+
+header .divLogo img {
+    width: 50px;
+    height: 50px;
+}
+
+header a {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    color: rgb(239, 237, 233);
+}
+
+header a:hover {
+    color: rgb(241, 184, 40);
+}
+
+.section-menu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    border-radius: 4px;
+    background-color: rgb(241, 184, 40);
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.section-menu a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.section-menu ul {
+    margin: 0;
+    padding: 0;
 }
 
 .section-menu li {
-    display: inline-flex;
     list-style: none;
-    padding-left: 50px;
+    display: inline-flex;
+    padding-left: 5rem;
 }
 
 main .home-page {
-    display: flex;
     width: 100%;
-    height: 880px;
-    display: flex;
-    justify-content: center;
-    font-family: 'Lora', serif;
-    padding: 30px;
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    padding-top: 90px;
 }
 
 main .home-page .home-page-video {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+    overflow: hidden;
     object-fit: cover;
 }
 
-main .home-page div {
+main .home-page .home-page-text {
+    width: 100%;
+    height: 100%;
     color: rgb(241, 184, 40);
     position: relative;
     z-index: 1;
-    padding-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 3.5rem;
 }
 
-main .home-page h1 {
-    text-align: center;
+main .home-page .home-page-text h1 {
     font-size: 6rem;
-    width: 600px;
-    border-bottom: 1px solid whitesmoke;
 }
 
-main .home-page h2 {
+main .home-page .home-page-text h2 {
     font-size: 3rem;
 }
 
-main .home-page a {
-    color: rgb(241, 184, 40);
-    text-align: center;
+main .home-page .home-page-text a {
     font-size: 2rem;
-    margin-top: 110px;
-}
-
-main #conocenos {
-    position: relative;
-    top: 750px;
+    padding-top: 90px;
+    color: rgb(239, 237, 233);
 }
 
 main .container-informacion {
-    background-color: rgb(239, 237, 233);
-    color: rgb(48, 25, 0);
-    height: 850px;
     width: 100%;
+    height: 190vh;
+    position: absolute;
+    background: rgb(239, 237, 233);
+    padding: 2rem;
+    padding-top: 15rem;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 main .container-informacion h1 {
-    font-size: 4.5rem;
-    display: flex;
-    justify-content: center;
-    padding-top: 120px;
-    margin-bottom: 30px;
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(48, 25, 0);
 }
 
 main .container-informacion .informacion {
-    width: 100%;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    font-size: 2.4rem;
-    padding: 50px;
-    padding-bottom: 100px;
-}
-
-main .container-informacion .informacion p {
-    padding-right: 50px;
+    grid-template-columns: 1fr 1fr;
+    font-size: 2.1rem;
+    margin-top: 5rem;
     text-align: justify;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    color: rgb(48, 25, 0);
 }
 
 .carousel {
-    width: 640px;
-    height: 400px;
+    width: 100%;
+    height: 80%;
     margin-top: 10px;
     overflow: hidden;
     position: relative;
     border-radius: 10px;
+    align-items: center;
+    justify-content: center;
   }
   
   .slide {
@@ -226,12 +244,16 @@ main .container-informacion .informacion p {
   }
   
   .controls {
-    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
   button {
+    z-index: 1;
     padding: 5px 10px;
-    margin-top: 160px;
     background-color: transparent;
     border: none;
     color: whitesmoke;
@@ -247,108 +269,78 @@ main .container-informacion .informacion p {
 
   #nextBtn {
     border-radius: 10px;
-    position: relative;
-    left: 500px;
   }
 
-  #eventos {
-    position: relative;
-    bottom: 100px;
+  main .container-eventos {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    padding: 2rem;
+    padding-top: 15rem !important;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13rem;
   }
 
-main .container-eventos {
+  main .container-eventos .titulo-eventos {
+    color: rgb(48, 25, 0);
+    font-size: 4rem;
+  }
+
+  main .container-eventos .eventos {
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    background-color: rgb(239, 237, 233);
+    border: 1px solid rgb(239, 237, 233);
+    color: rgb(48, 25, 0);
+    border-radius: 3rem;
+    padding: 3rem;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  main .container-eventos .eventos .divEvento {
+    width: 100%;
+    height: 100px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    background-color: white;
-    color: rgb(48, 25, 0);
-    height: 850px;
+  }
+
+  main .container-eventos .eventos div h1 {
+    font-size: 3rem;
+  }
+
+  main .container-eventos .eventos div p {
+    font-size: 1.6rem;
+  }
+
+  main .container-eventos .eventos img {
     width: 100%;
-    padding: 20px;
-}
-
-main .titulo-eventos {
-    width: 100%;
-    color: rgb(48, 25, 0);
-    font-size: 4.5rem;
-    text-align: center;
-    margin-top: 100px;
-    margin-left: 20px;
-    margin-bottom: 0;
-    padding: 0;
-}
-
-main .container-eventos .eventos {
-    width: 100%;
-    height: 600px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 100px;
-    padding-bottom: 500px;
-    text-align: center;
-    font-size: 1.7rem;
-}
-
-main .container-eventos img {
-    border-radius: 10px;
-    border: solid 1px rgb(48, 25, 0);
-}
-
-main .container-eventos .xv {
-    background-color: rgb(239, 237, 233);
-    border-radius: 10px 0 0 10px;
-    padding: 25px;
-}
-
-main .container-eventos .xv img {
-    width: 340px;
-    height: 220px;
-    margin-top: 35px;
-}
-
-main .container-eventos .bodas {
-    background-color: rgb(239, 237, 233);
-    padding: 25px;
-}
-
-main .container-eventos .bodas img {
-    width: 340px;
-    height: 220px;
-    margin-top: 10px;
+    height: 310px;
     object-fit: cover;
-}
+    padding-top: 2.5rem;
+    border-radius: 3rem;
+  }
 
-main .container-eventos .baby-shower {
-    background-color: rgb(239, 237, 233);
-    border-radius: 0 10px 10px 0;
-    padding: 25px;
-}
-
-main .container-eventos .baby-shower img {
-    width: 340px;
-    height: 220px;
-    margin-top: 55px;
-    object-fit: cover;
-}
-
-footer {
+  #footer {
     width: 100%;
-    height: 300px;
-    position: relative;
-    bottom: 0;
+    height: auto;
     background-color: rgb(48, 25, 0);
-    font-size: 1.9rem;
+    position: absolute;
+    bottom: -1950px;
+    padding: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    padding: 40px;
-    padding-top: 70px;
-    box-shadow: 0px -20px 20px rgba(0, 0, 0, 0.3);
-}
+  }
 
-footer h3 {
+  footer h3 {
     font-size: 2.1rem;
 }
 
@@ -360,6 +352,10 @@ footer .section-left h3 {
 footer .section-left p {
     padding-top: 10px;
     font-size: 1.7rem;
+}
+
+footer .section-mid {
+    padding-left: 1rem;
 }
 
 footer .section-mid .horario {
@@ -375,7 +371,7 @@ footer .section-mid h3 {
 
 footer .section-mid h5 {
     margin-bottom: 10px;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
 }
 
 footer .section-mid .parrafo-cita {
@@ -415,8 +411,46 @@ footer .section-right .redes-sociales .parrafos {
     flex-direction: column;
     align-items: self-start;
     margin-left: 20px;
+    font-size: 1.5rem;
 }
 
 footer .section-right .redes-sociales .parrafos .parrafo-jardin {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+
+    .section-menu {
+        width: 80%;
+        height: auto;
+        margin-right: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+    }
+
+    .navBar {
+        padding-right: 2rem;
+        padding-left: 6rem;
+    }
+    
+    .carousel {
+        width: 90%;
+        height: 100% !important;
+        padding-left: 4rem;
+        padding-right: 0;
+      }
+    
+      main .container-eventos .eventos {
+        height: 60vh !important;
+      }
+    
+      main .container-eventos .eventos img {
+        height: 310px !important;
+      }
+    
+      #footer {
+        bottom: -1950px !important;
+      }
 }

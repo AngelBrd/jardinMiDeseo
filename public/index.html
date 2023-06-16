@@ -18,9 +18,9 @@
 </head>
 <body class="body">
     <header>
-        <section class="section-logo">
+        <div class="divLogo">
             <a href=""><img src="https://cdn-icons-png.flaticon.com/512/2926/2926745.png" alt=""></a>
-        </section>
+        </div>
         <div class="bars-menu">
             <span class="line1_bars-menu"></span>
             <span class="line2_bars-menu"></span>
@@ -36,16 +36,17 @@
         </section>
     </header>
     <main>
-        <section class="home-page">
-            <video class="home-page-video" src="videoJardin2.mp4" autoplay muted loop></video>
-            <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="home-page">
+            <div class="home-page-video">
+            <video src="videoJardin2.mp4" autoplay muted loop></video>
+            </div>
+            <div class="home-page-text" data-aos="fade-up" data-aos-duration="1000">
                 <h1>Jardín "Mi Deseo"</h1>
                 <h2>Te aseguramos que disfrutarás de tu evento</h2>
                 <a href="cotizaTuEvento.html">Cotíza tu evento aquí</a>
             </div>
-            <p id="conocenos"></p>
-        </section>
-    <section class="container-informacion">
+        </div>
+    <div id="conocenos" class="container-informacion">
         <h1 data-aos="fade-down" data-aos-duration="1000">¿Quiénes somos?</h1>
         <div data-aos="fade-up" data-aos-duration="1000" class="informacion">
         <p>¡Te damos la bienvenida a nuestro encantador jardín de eventos! Aquí, te invitamos a descubrir un lugar excepcional donde la naturaleza y la elegancia se fusionan para crear momentos inolvidables. Nuestros cuidados meticulosamente diseñados resaltan la belleza de cada rincón, convirtiendo nuestro jardín en el escenario perfecto para celebrar cualquier tipo de evento. Ya sea una boda romántica, un evento empresarial, una reunión familiar o cualquier ocasión especial, estamos preparados para hacer de tu evento una experiencia única. Nos complace abrir nuestras puertas y ofrecerte un lugar excepcional para tus eventos. ¡Ven a conocernos y descubre la magia que Jardín de Eventos "Mi Deseo" tiene para ofrecerte!</p>
@@ -61,30 +62,39 @@
                 <button id="nextBtn" class="fas fa-chevron-right fa-3x"></button>
             </div>
         </div>
-    </section>
-    <p id="eventos"></p>
-    <div class="background-eventos">
-    <h1 data-aos="fade-down" data-aos-duration="1000" class="titulo-eventos">Nuestros eventos</h1>
-    <section data-aos="fade-up" data-aos-duration="1000" class="container-eventos">
-        <div class="eventos">
-        <div class="xv">
-            <h1>XV Años</h1>
-            <p>Solo cumples 15 años una vez y solo hay un único Jardín "Mi Deseo".</p>
-            <img src="jardinImg8.jpg" alt="">
+    </div>
+    <div id="eventos" class="container-eventos">
+        <h1 data-aos="fade-down" data-aos-duration="1000" class="titulo-eventos">Nuestros eventos</h1>
+        <div data-aos="fade-up" data-aos-duration="1000" class="eventos">
+        <div class="divEvento">
+            <div class="div-texto-eventos" >
+                <h1>XV Años</h1>
+                <p>¡Convertiremos tu fiesta en un día inolvidable!</p>
+            </div>
+            <div class="divImg">
+                <img class="xv-img" src="jardinImg8.jpg" alt="imagen de xv anos">
+            </div>
         </div>
-        <div class="bodas">
-            <h1>Bodas</h1>
-            <p>Descubre el escenario perfecto para tu día especial: ¡bodas mágicas en nuestro exquisito jardín de eventos!.</p>
-            <img src="jardinImg10.jpg" alt="">
+        <div class="divEvento">
+            <div class="div-texto-eventos">
+                <h1>Bodas</h1>
+                <p>Descubre el escenario perfecto para tu día especial.</p>
+            </div>
+            <div class="divImg">
+                <img src="jardinImg10.jpg" alt="imagen de bodas">
+            </div>
         </div>
-        <div class="baby-shower">
-            <h1>Baby Shower</h1>
-            <p>¿Niño o niña? Contamos con arreglos para ambos.</p>
-            <img src="jardinImg9.jpg" alt="">
+        <div class="divEvento">
+            <div class="div-texto-eventos">
+                <h1>Baby Shower</h1>
+                <p>¿Niño o niña? Contamos con arreglos para ambos.</p>
+            </div>
+            <div class="divImg">
+                <img class="baby-shower-img" src="jardinImg9.jpg" alt="imagen de baby shower">
+            </div>
         </div>
         </div>
     </div>
-    </section>
     </main>
     <footer id="footer">
             <section data-aos="fade-down" data-aos-duration="1000" class="section-left">

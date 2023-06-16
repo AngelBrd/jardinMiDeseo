@@ -1,12 +1,7 @@
-@media (max-width:695px) {
+@media screen and (max-width: 668px) {
 
     .body-overflow_hidden {
         overflow: hidden;
-    }
-
-    .section-logo img {
-        width: 50px;
-        height: 50px;
     }
 
     .section-menu {
@@ -18,9 +13,15 @@
         width: 100%;
         height: calc(100% - 90px);
         overflow-y: auto;
+        padding-top: 6rem;
 
         left: 100%;
         transition: left 0.3s;
+    }
+
+    .section-menu ul {
+        margin: 0;
+        padding: 0;
     }
     
     .section-menu li {
@@ -28,8 +29,8 @@
         flex-direction: column;
         padding: 30px;
         align-items: center;
-        font-size: 3.2rem;
-        line-height: 60px;
+        font-size: 3rem;
+        line-height: 80px;
         position: relative;
         top: -50px;
     }
@@ -43,236 +44,121 @@
         left: 0%;
     }
 
-    main .home-page {
-        width: 100%;
-        height: 800px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        padding-right: 50px;
+    header .divLogo {
+        padding-left: 0;
     }
 
-    main .home-page div {
-        margin-left: 15px;
-    }
-
-    main .home-page h1 {
-        width: 350px;
-        grid-row: 1;
-        font-size: 4rem;
-    }
-    
-    main .home-page h2 {
-        grid-row: 1;
-        font-size: 1.7rem;
+    main .home-page .home-page-text {
         text-align: center;
     }
 
-    main #conocenos {
-        top: 720px;
+    main .home-page .home-page-text h1 {
+        font-size: 3rem;
+    }
+    
+    main .home-page .home-page-text h2 {
+        font-size: 2rem;
+    }
+    
+    main .home-page .home-page-text a {
+        font-size: 1.5rem;
     }
 
     main .container-informacion {
-        height: 1200px;
+        height: 150vh;
     }
-    
+
     main .container-informacion h1 {
-        padding-top: 80px;
-        margin-bottom: 5px;
-        font-size: 3.5rem;
-        display: flex;
-        justify-content: center;
+        font-size: 3rem;
     }
-    
+
     main .container-informacion .informacion {
+        height: 80%;
+        display: grid;
+        gap: 1rem;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
-        grid-template-rows: 2fr 1fr;
-        font-size: 2rem;
-        padding-right: 0;
+        font-size: 1.5rem;
     }
 
-    main .container-informacion .informacion p {
-        letter-spacing: -0.1px;
-    }
-
-    .carousel {
-        width: 320px;
-        height: 200px;
-        margin-top: 30px;
-        overflow: hidden;
-        position: relative;
-        border-radius: 10px;
-      }
-      
-      button {
-        padding: 5px 10px;
-        margin-top: 70px;
-        background-color: transparent;
-        border: none;
-        color: whitesmoke;
-      }
-    
-      #nextBtn {
-        left: 198px;
-      }
-
-    #eventos {
-        bottom: 20px;
+    main .container-informacion .carousel {
+        height: 70%;
     }
 
     main .container-eventos {
-        height: 1300px;
+        height: 200vh;
+        padding-top: 8rem;
+        margin-top: 4.2rem;
     }
 
-    main .titulo-eventos {
-        width: 370px;
-        font-size: 3.8rem;
-        margin-top: 100px;
-        padding-right: 20px;
+    main .container-eventos .titulo-eventos {
+        font-size: 3rem;
+    }
+
+    main .container-eventos .eventos {
+        height: 150vh;
+        grid-template-columns: 1fr;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    main .container-eventos .eventos div h1 {
+        font-size: 2rem;
     }
     
-    main .container-eventos .eventos {
-        height: 1080px;
-        width: 338px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        margin-top: 50px;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 1.5rem;
+    main .container-eventos .eventos div p {
+        font-size: 1.4rem;
     }
 
     main .container-eventos .eventos img {
-        width: 280px;
-        height: 180px;
-    }
-
-    main .container-eventos .xv {
-        border-radius: 10px 10px 0 0;
-    }
-
-    main .container-eventos .baby-shower {
-        border-radius: 0 0 10px 10px;
-    }
-
-    main .container-eventos .baby-shower img {
-        margin-top: 30px;
-    }
-
-    footer {
         width: 100%;
-        height: 800px;
-        font-size: 1.9rem;
-        margin-top: 80px;
+        height: 180px;
+        padding-top: 0;
+    }
+
+    #footer {
+        bottom: -3050px;
+        padding: 2rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        gap: 3rem;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        padding: 40px;
-        padding-top: 80px;
-    }
-
-    footer h3 {
-        font-size: 1.9rem;
-    }
-
-    footer .section-left {
-        text-align: start;
-        margin-right: 20px;
-    }
-
-    footer .section-mid {
-        text-align: start;
-        grid-row: 2;
-        margin-top: 40px;
-    }
-
-    footer .section-mid h5 {
-        font-size: 1.5rem;
-    }
-
-    footer .section-mid .horario {
-        margin-right: 50px;
-    }
-
-    footer .section-mid .parrafo-cita {
-        text-align: start;
-    }
-
-    footer .section-right {
-        text-align: start;
-        grid-row: 3;
-    }
-
-    footer .section-right h3 {
-        margin-top: 40px;
     }
 
     footer .section-right .redes-sociales .icons {
-        align-items: start;
-    }
-
-    footer .section-right .redes-sociales .icons .facebook {
-        margin-bottom: 30px;
+        padding-right: 2rem;
     }
 
     footer .section-right .redes-sociales .parrafos {
-        width: 300px;
-        text-align: start;
+        margin-left: 0;
     }
-    
-    footer .section-right .redes-sociales .parrafos .parrafo-jardin {
-        margin-bottom: 35px;
-    }
-    
+
 }
 
-@media (min-width: 310px) and (max-width: 400px) {
-
-    header {
-        width: 100%;
-    }
-
-    main .home-page {
-        height: 650px;
-    }
-
-    main #conocenos {
-        top: 600px;
-    }
-
+@media screen and (min-height: 688px) {
     main .container-informacion {
-        width: 100%;
-        height: 1280px;
+        height: 100vh;
     }
 
-    .carousel {
-        width: 290px;
-        height: 180px;
-      }
-
-      button {
-        padding: 5px 5px;
-        margin-top: 60px;
-      }
-    
-      #nextBtn {
-        left: 187px;
-      }
-
-    main .container-eventos {
-        width: 100%;
-        height: 1300px;
+    main .container-informacion .carousel {
+        height: 90%;
     }
 
     main .container-eventos .eventos {
-        margin-left: 16px;
+        height: 110vh;
     }
 
-    main .titulo-eventos {
-        width: 100%;
-        padding-right: 0;
+    main .container-eventos {
+        padding-top: 10rem;
     }
 
-    footer {
-        width: 100%;
-        height: 800px;
+    main .container-eventos .eventos img {
+        height: 210px;
+        padding-top: 2rem;
     }
+
+    #footer {
+        bottom: -2900px;
+    }
+
 }
