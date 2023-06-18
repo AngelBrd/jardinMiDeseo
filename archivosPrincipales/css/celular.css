@@ -81,6 +81,7 @@
         grid-template-rows: 2fr 1fr;
         grid-template-columns: 1fr;
         font-size: 1.7rem;
+        margin-top: 2rem;
     }
 
     main .container-informacion .carousel {
