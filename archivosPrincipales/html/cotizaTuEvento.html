@@ -11,6 +11,11 @@
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2926/2926745.png" type="image/x-icon">
     <link rel="stylesheet" href="/jardinMiDeseo/archivosPrincipales/css/cotizaTuEvento.css">
     <link rel="stylesheet" href="/jardinMiDeseo/archivosPrincipales/css/tablet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Spline+Sans+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elsie&display=swap" rel="stylesheet">
 </head>
 <body>
         <header>
@@ -56,8 +61,9 @@
                   </select>
                 <select id="paquete" name="Paquete" onchange="actualizarPrecio()">
                     <option value="" disabled selected>Paquete</option>
-                    <option value="1">Paquete 1</option>
-                    <option value="2">Paquete 2</option>
+                    <option value="1">Solo Jardín</option>
+                    <option value="2">Paquete 1</option>
+                    <option value="3">Paquete 2</option>
                   </select>
                 <input id="precio" name="precio-paquete" type="text" value="" autocomplete="off" placeholder="Precio" readonly>
                 <textarea class="descripcion" id="descripcion" rows="6" name="Servicios" placeholder="Descripcion del paquete" readonly></textarea>
@@ -119,6 +125,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="/jardinMiDeseo/archivosPrincipales/js/main.js"></script>
+    <script src="/jardinMiDeseo/archivosPrincipales/js/cotizaTuEvento.js"></script>
 </body>
 </html>

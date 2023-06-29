@@ -14,12 +14,14 @@
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2926/2926745.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Spline+Sans+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Elsie&display=swap" rel="stylesheet">
 </head>
 <body class="body">
-    <header>
+    <header id="header">
         <div class="divLogo">
-            <a href=""><img src="https://cdn-icons-png.flaticon.com/512/2926/2926745.png" alt=""></a>
+            <a href=""><p>Jardín "Mi Deseo"</p></a>
         </div>
         <div class="bars-menu">
             <span class="line1_bars-menu"></span>
@@ -28,9 +30,8 @@
         </div>
         <section class="section-menu">
             <ul>
-                <li><a href="#conocenos" class="conocenos">Conócenos</a></li>
-                <li><a href="#eventos" class="eventos">Eventos</a></li>
-                <li><a href="cotizaTuEvento.html">Cotíza tu Evento</a></li>
+                <li><a href="#galeria" class="galeria">Galeria</a></li>
+                <li><a href="#paquetes" class="paquetes">Paquetes</a></li>
                 <li><a href="#footer" class="contactanos">Contáctanos</a></li>
             </ul>
         </section>
@@ -41,57 +42,99 @@
             <video src="/jardinMiDeseo/archivosPrincipales/resources/videoJardin2.mp4" autoplay muted loop></video>
             </div>
             <div class="home-page-text" data-aos="fade-up" data-aos-duration="1000">
-                <h1>Jardín "Mi Deseo"</h1>
-                <h2>Te aseguramos que disfrutarás de tu evento</h2>
-                <a href="cotizaTuEvento.html">Cotíza tu evento aquí</a>
+                <h1>Un Paraiso De Elegancia Para Tus Eventos Especiales</h1>
+                <a href="cotizaTuEvento.html"><button>Cotíza tu evento</button></a>
             </div>
         </div>
-        <div id="conocenos" class="container-informacion">
-            <h1 class="titulo-informacion" data-aos="fade-down" data-aos-duration="1000">¿Quiénes somos?</h1>
-            <div data-aos="fade-up" data-aos-duration="1000" class="informacion">
-                <p>
-                    ¡Te damos la bienvenida a nuestro encantador jardín de eventos! Aquí, te invitamos a descubrir un lugar excepcional donde la naturaleza y la elegancia se fusionan para crear momentos inolvidables. Nuestros cuidados meticulosamente diseñados resaltan la belleza de cada rincón, convirtiendo nuestro jardín en el escenario perfecto para celebrar cualquier tipo de evento. Ya sea una boda romántica, un evento empresarial, una reunión familiar o cualquier ocasión especial, estamos preparados para hacer de tu evento una experiencia única. Nos complace abrir nuestras puertas y ofrecerte un lugar excepcional para tus eventos. ¡Ven a conocernos y descubre la magia que Jardín de Eventos "Mi Deseo" tiene para ofrecerte!
-                </p>
-                <div data-aos="fade-up" data-aos-duration="1000" class="carousel">
-                    <img class="slide" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg1.jpg">
-                    <img class="slide" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg2.jpg">
-                    <img class="slide" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg3.jpg">
-                    <img class="slide" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg4.jpg">
-                    <img class="slide" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg6.jpg">
-                    <img class="slide" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg11.jpg">
-                    <div class="controls">
-                        <button id="prevBtn" class="fas fa-chevron-left fa-3x"></button>
-                        <button id="nextBtn" class="fas fa-chevron-right fa-3x"></button>
-                    </div>
-                </div>
+        <div data-aos="fade-up" data-aos-duration="1000" class="container-cards">
+            <div class="cards-s1">
+            <div class="card1">
+                <h2>500+</h2>
+                <p>Invitados Satisfechos</p>
+            </div>
+            <div class="card2">
+                <img src="/jardinMiDeseo/archivosPrincipales/resources/sonrisa.png" alt="">
+            </div>
+            </div>
+            <div class="cards-s2">
+            <div class="card3">
+                <img src="/jardinMiDeseo/archivosPrincipales/resources/papel-picado.png" alt="">
+            </div>
+            <div class="card4">
+                <h2>100+</h2>
+                <p>Eventos Magicos</p>
+            </div>
             </div>
         </div>
-        <div id="eventos" class="container-eventos">
-            <h1 class="titulo-eventos" data-aos="fade-down" data-aos-duration="1000">Nuestros Eventos</h1>
-            <div class="eventos-grid">
-                <div class="evento" data-aos="fade-up" data-aos-duration="1000">
-                    <h3>Bodas</h3>
-                    <p>Descubre el escenario perfecto para tu día especial.</p>
-                    <img src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg10.jpg" alt="">
-                </div>
-                <div class="evento" data-aos="fade-up" data-aos-duration="1000">
-                    <h3>Fiestas de Cumpleaños</h3>
-                    <p>Celebra tus cumpleaños de una manera inolvidable.</p>
-                    <img src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg8.jpg" alt="">
-                </div>
-                <div class="evento" data-aos="fade-up" data-aos-duration="1000">
-                    <h3>Baby Shower</h3>
-                    <p>¿Niño o niña? Contamos con arreglos para ambos.</p>
-                    <img src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg9.jpg" alt="">
-                </div>
+        <div class="container-frase">
+            <h1 data-aos="fade-up" data-aos-duration="1000">Lleva Tus Eventos A Otro Nivel</h1>
+        </div>
+        <div id="galeria" class="container-memories">
+            <h2 data-aos="fade-right" data-aos-duration="1000">Memorias Encantadoras</h2>
+            <div class="memories">
+                <img data-aos="fade-up" data-aos-duration="1000" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg11.jpg" alt="">
+                <img data-aos="fade-up" data-aos-duration="1000" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg3.jpg" alt="">
+                <img data-aos="fade-up" data-aos-duration="1000" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg8.jpg" alt="">
+                <img data-aos="fade-up" data-aos-duration="1000" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg4.jpg" alt="">
+                <img data-aos="fade-up" data-aos-duration="1000" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg10.jpg" alt="">
+                <img data-aos="fade-up" data-aos-duration="1000" src="/jardinMiDeseo/archivosPrincipales/resources/jardinImg1.jpg" alt="">
+            </div>
+        </div>
+        <div class="container-experience">
+            <h2 data-aos="fade-right" data-aos-duration="1000">La Experiencia</h2>
+            <p data-aos="fade-up" data-aos-duration="1000">Imagina un exuberante jardín lleno de flores y luces ambientales, transformando tus eventos en celebraciones de ensueño. Jardin de Eventos "Mi Deseo" ofrece entornos caprichosos para cumpleaños, bodas y más, para que nunca tengas que conformarte con lo ordinario. Sumérgete en el encanto y deja volar tu imaginación, nosotros lo haremos realidad.</p>
+        </div>
+        <div id="paquetes" class="container-eventos">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h3>Unicamente Jardin</h3>
+                <h2>$5,000/Evento</h2>
+                    <p class="p1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>Solo jardin</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>Area de asador, refrigerador, horno de microondas, baños mujeres, baños hombres</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>30 Invitados</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>Uso por 7hrs</p>
+                <a href="cotizaTuEvento.html"><button>Cotíza ahora</button></a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h3>Paquete 1</h3>
+                <h2>$6,600/Evento</h2>
+                    <p class="p1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>Area de asador, refrigerador, horno de microondas, baños mujeres, baños hombres</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>Mesas y sillas</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>30 Invitados</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>Uso por 7hrs</p>
+                <a href="cotizaTuEvento.html"><button>Cotíza ahora</button></a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h3>Paquete 2</h3>
+                <h2>$6,800/Evento</h2>
+                    <p class="p1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>Area de asador, refrigerador, horno de microondas, baños mujeres, baños hombres</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>Mesas y sillas con manteleria</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>30 Invitados</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>Uso por 7hrs</p>
+                <a href="cotizaTuEvento.html"><button>Cotíza ahora</button></a>
+            </div>
+        </div>
+        <div class="container-questions">
+            <h2 data-aos="fade-right" data-aos-duration="1000">Preguntas Frecuentes</h2>
+            <div class="questions">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h3>¿Qué tipos de eventos manejamos?</h3>
+                <p>En nuestro espacio, nos especializamos en la organización y celebración de una amplia variedad de eventos. Desde fiestas de cumpleaños hasta bodas, baby showers y eventos empresariales, nos encargamos de crear momentos inolvidables para cualquier ocasión.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h3>¿Cuál es la capacidad máxima del jardín?</h3>
+                <p>Nuestro jardín de eventos tiene una capacidad máxima de 150 invitados. Sin embargo, nuestro espacio es versátil y se puede adaptar para diferentes tamaños de grupos. Contamos con opciones de disposición flexible que nos permiten ajustar el diseño y la distribución del espacio para eventos más íntimos o grupos más grandes. Nos aseguramos de brindar un ambiente acogedor y confortable, sin importar el tamaño de tu evento.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <h3>¿Ofrecen servicios adicionales, como música en vivo, servicio de fotografía o banquetes?</h3>
+                <p>Sí, nos complace ofrecer servicios adicionales para complementar tu evento en nuestro jardín. Podemos ayudarte a organizar la música en vivo según tus preferencias, proporcionar recomendaciones para servicios de fotografía de alta calidad y ofrecer servicios de banquetes para garantizar que cada detalle sea impecable.</p>
+            </div>
             </div>
         </div>
     </main>
     <footer id="footer">
         <section data-aos="fade-down" data-aos-duration="1000" class="section-left">
             <h3>Contáctanos</h3>
-            <p><i class="fas fa-map-marker-alt"></i>Galeana, A. Barron 117, Centro, 54400 Villa Nicolás Romero.</p>
-            <p><i class="fas fa-phone-alt"></i>5538896095</p>
+            <p><i class="fas fa-map-marker-alt"></i>Galeana, A. Barron 117, Centro, 54400 Villa Nicolás Romero. Estado de Mexico.</p>
             <p><i class="fas fa-envelope"></i>jardinmideseo@gmail.com</p>
         </section>
         <section data-aos="fade-down" data-aos-duration="1000" class="section-mid">
@@ -106,7 +149,7 @@
                     <p>10:00am a 6:00pm</p>
                 </section>
             </div>
-            <p class="parrafo-cita">Unicamente con cita agendada.</p>
+            <p class="parrafo-cita">Unicamente con cita agendada</p>
         </section>
         <section data-aos="fade-down" data-aos-duration="1000" class="section-right">
             <h3>Redes Sociales</h3>
@@ -126,6 +169,6 @@
         <p>Todos los derechos reservados &copy; 2023 Jardín Mi Deseo | Desarrollado por: <a href="">Angel Brand</a></p>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/jardinMiDeseo/archivosPrincipales/js/button_menu.js"></script>
+    <script src="/jardinMiDeseo/archivosPrincipales/js/main.js"></script>
 </body>
 </html>

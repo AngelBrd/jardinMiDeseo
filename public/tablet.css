@@ -1,105 +1,158 @@
-@media screen and (min-width: 668px) and (max-width: 1023px) {
+@media screen and (min-width: 668px) and (max-width: 1339px) {
+    header {
+        padding: 1rem;
+        padding-top: 5rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        justify-content: start;
+    }
+    
     header .divLogo {
-        padding-left: 0;
-        margin-right: 0;
-    }
-
-    header .section-menu {
-        width: 90%;
-        font-size: 1.7rem;
-        margin-right: 0;
-    }
-
-    main .home-page .home-page-text h1 {
-        font-size: 4rem;
+        width: 70%;
     }
     
-    main .home-page .home-page-text h2 {
-        font-size: 2.5rem;
+    header .divLogo p {
+        margin: 0;
     }
     
-    main .home-page .home-page-text a {
-        font-size: 1.8rem;
+    header .section-menu ul {
+        gap: 2rem;
     }
 
-    main .container-informacion {
-        height: 900px;
-        padding-top: 10rem;
-    }
-
-    main .container-informacion h1 {
-        font-size: 3rem;
-    }
-
-    main .container-informacion .informacion {
+    main .home-page {
         height: 100%;
-        display: grid;
+    }
+    
+    
+    main .home-page .home-page-text {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    
+    main .home-page .home-page-text h1 {
+        font-size: 6rem;
+    }
+    
+    main .container-cards .cards-s1 {
+        height: 100%;
         gap: 1rem;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
-        font-size: 1.8rem;
-        margin-top: 3rem;
-    }
-
-    main .container-informacion .carousel {
-        height: 390px;
-        width: 100%;
-    }
-
-    main .container-eventos {
-        height: 900px;
-        padding-top: 10rem;
-    }
-
-    main .container-eventos .titulo-eventos {
-        font-size: 3rem;
-    }
-
-    main .container-eventos .eventos-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1rem;
-        padding: 1.2rem;
+        padding: 7rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-bottom: 0;
     }
     
-    main .container-eventos .eventos-grid .evento h3 {
-        font-size: 3rem;
-        margin-top: 2rem;
+    main .container-cards .cards-s2 {
+        height: 100%;
+        gap: 1rem;
+        padding: 7rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 1rem;
     }
     
-    main .container-eventos .eventos-grid .evento p {
-        font-size: 1.6rem;
-        margin-top: 1rem;
-    }
-    
-    main .container-eventos .eventos-grid .evento img {
-        margin-bottom: 2rem;
-        margin-top: 1rem;
-    }
-
-    #footer {
+    main .container-cards .cards-s1 div {
         padding: 2rem;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+    }
+    
+    main .container-cards .cards-s2 div {
+        padding: 2rem;
+    }
+    
+    main .container-cards div img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    main .container-cards div h2 {
+        font-size: 5rem;
+    }
+    
+    main .container-cards div p {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    main .container-frase {
+        height: 90vh;
+        background-position: center center;
+    }
+    
+    main .container-frase h1 {
+        font-size: 6rem;
+        padding: 4rem;
+    }
+    
+    main .container-memories {
+        padding: 8rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    
+    main .container-memories h2 {
+        font-size: 5rem;
+    }
+    
+    main .container-memories .memories {
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
-        grid-template-columns: repeat(3, 1fr);
     }
-
-    footer .section-right .redes-sociales .icons {
+    
+    main .container-experience {
+        height: 100%;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    
+    main .container-experience p {
+        width: 90%;
+        font-size: 2rem;
+    }
+    
+    main .container-eventos {
+        height: 100%;
+        padding-left: 2rem;
         padding-right: 2rem;
+        margin-bottom: 0;
+        grid-template-columns: 1fr 1fr;
     }
 
-    footer .section-right .redes-sociales .parrafos {
+    main .container-eventos div h2 {
+        font-size: 3rem;
+    }
+    
+    main .container-questions {
+        height: 100%;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    
+    main .container-questions .questions {
+        grid-template-columns: 1fr;
+    }
+
+    main .container-questions .questions p {
         font-size: 1.5rem;
-        margin-left: 0;
+    }
+    
+    #footer {
+        padding: 4rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        gap: 4rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 7rem;
+    }
+    
+    footer .section-right .redes-sociales {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
     }
 
-    footer .section-right .redes-sociales .parrafos .parrafo-jardin {
-        margin-bottom: 45px;
-        margin-left: 0;
-        padding-left: 0;
-        text-align: start;
-        width: 125px;
+    footer .section-right .redes-sociales .parrafos p {
+        margin-bottom: 0;
+        margin-top: .2rem;
     }
 
 }

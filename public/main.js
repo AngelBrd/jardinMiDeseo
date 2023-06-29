@@ -1,266 +1,94 @@
 AOS.init();
 
-//SE DECLARAN LOS PRECIOS Y DESCRIPCIONES DE LOS PAQUETES 1 Y 2 CON SUS VARIACIONES PARA DESPUES LLENAR INPUTS
+// Función para cambiar la clase del encabezado al hacer scroll
+window.addEventListener("scroll", function() {
+  var header = document.getElementById("header");
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-var precios = {
-  "30": {
-    "1": 6600,
-    "2": 6800
-  },
-  "40": {
-    "1": 6700,
-    "2": 6950
-  },
-  "50": {
-    "1": 6900,
-    "2": 7080
-  },
-  "60": {
-    "1": 7000,
-    "2": 7210
-  },
-  "70": {
-    "1": 7100,
-    "2": 7340
-  },
-  "80": {
-    "1": 7200,
-    "2": 7470
-  },
-  "90": {
-    "1": 7300,
-    "2": 7600
-  },
-  "100": {
-    "1": 7400,
-    "2": 7730
-  },
-  "110": {
-    "1": 7500,
-    "2": 7820
-  },
-  "120": {
-    "1": 7600,
-    "2": 7990
-  },
-  "130": {
-    "1": 7700,
-    "2": 8120
-  },
-  "140": {
-    "1": 7800,
-    "2": 8240
-  },
-  "150": {
-    "1": 7900,
-    "2": 8380
-  }
-};
-
-var descripciones = {
-  "1": "El Paquete 1 incluye: \n• Uso por 7 horas.\n• Jardín con área de asador, refrigerador, horno de microondas, baños mujeres, baños hombres.\n• Lona 10x15m.\n• Mesas con mantel.\n• Sillas.\n• 1 tablón con mantel (blanco) y sillas para mesa principal.",
-  "2": "El Paquete 2 incluye: \n• Uso por 7 horas.\n• Jardín con área de asador, refrigerador, horno de microondas, baños mujeres, baños hombres.\n• Lona 10x15m.\n• Mesas con mantel (blanco) y cubre mantel (color a elegir).\n• Sillas con fundas (blancas) y bandas (color a elegir).\n• 1 tablón con mantel y sillas para mesa principal."
-};
-
-//AQUI SE EJECUTA EL LLENADO AUTOMATICO DE LOS INPUTS
-
-function actualizarPrecio() {
-  var personas = document.getElementById("form_personas").value;
-  var paquete = document.getElementById("paquete").value;
-  
-  var precio = "";
-  if (personas && paquete) {
-    precio = precios[personas] ? precios[personas][paquete] || "Precio del Paquete" : "Precio del Paquete";
-  }
-  
-  var descripcion = descripciones[paquete] || "";
-  
-  document.getElementById("precio").value = precio;
-  document.getElementById("descripcion").value = descripcion;
-}
-
-
-function llenarPrecioHorasExtra(seleccion) {
-  let precioHorasExtraInput = document.getElementById('precio_horas_extra');
-
-  const precios = {
-    '0': 0,
-    '1': 200,
-    '2': 400,
-    '3': 600,
-    '4': 800
-  };
-
-  precioHorasExtraInput.placeholder = seleccion ? "" : "Precio horas extra";
-  precioHorasExtraInput.value = seleccion !== undefined ? precios[seleccion] || 0 : 0;
-}
-
-//CREACION DE ALERTA PERSONALIZADA (pendiente)
-
-function validarInputs() {
-  var precioPaquete = document.getElementById('precio').value;
-  var precioHorasExtra = document.getElementById('precio_horas_extra').value;
-  var botonCalcular = document.getElementById('boton');
-
-  if (precioPaquete !== '' && precioHorasExtra !== '') {
-    botonCalcular.disabled = false;
+  if (scrollPosition > 0) {
+    header.classList.add("scrolled");
   } else {
-    botonCalcular.disabled = true;
-  }
-}
-
-function calcularTotal() {
-  var precioPaquete = document.getElementById('precio').value;
-  var precioHorasExtra = document.getElementById('precio_horas_extra').value;
-
-  if (precioHorasExtra === "") {
-    Swal.fire({
-      title: "Por favor, seleccione el número de horas extra",
-      icon: "warning",
-      customClass: {
-        confirmButton: "boton-alerta-horas-extra"
-      },
-    });
-    return; // Detener la ejecución de la función si no se han seleccionado horas extras
-  }
-
-  var total = parseInt(precioPaquete) + parseInt(precioHorasExtra);
-
-  Swal.fire({
-    title: "El total de su cotización es de $" + total,
-    customClass: {
-      confirmButton: "boton-alerta-total"
-    },
-    customClass: {
-      popup: "alert-total"
-    }
-  });
-}
-
-
-
-//AQUI VALIDAMOS SI LA LONGITUD DEL NUMERO CELULAR ES DE 10
-
-const inputNumero = document.getElementById("form_celular_cliente");
-
-inputNumero.addEventListener("blur", function validarNumero() {
-    var numero = inputNumero.value;
-    if (numero.toString().length != 10) {
-        Toastify({
-
-            text: "El número debe tener 10 dígitos",
-            duration: 4000,
-            style:{
-              background: "red"
-            },
-            className: "alert-celular"
-            
-            }).showToast();;
-    }
-});
-
-//Validacion del input numero para que contenga 10 digitos y permitir el envio del formulario
-
-const form = document.getElementById("formulario");
-form.addEventListener("submit", function(event) {
-  // Verificar la longitud del número de celular ingresado
-  if (inputNumero.value.length !== 10) {
-    // Evitar el envío del formulario
-    event.preventDefault();
-    // Mostrar una alerta o mensaje de error
-    Toastify({
-      text: "El número debe tener 10 dígitos",
-      duration: 4000,
-      style: {
-        background: "red"
-      },
-      className: "alert-celular"
-    }).showToast();
-  } else {
-    // Evitar el envío del formulario por defecto
-    event.preventDefault();
-
-    // Mostrar la alerta de confirmación
-    Swal.fire({
-      title: '¿Desea enviar su cotizacion?',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      cancelButtonText: 'Cancelar',
-      confirmButtonText: 'Sí, enviar'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Mostrar la alerta de carga
-        const loadingAlert = Swal.fire({
-          title: 'Enviando cotización...',
-          text: 'Por favor, espere...',
-          icon: 'info',
-          allowOutsideClick: false,
-          showConfirmButton: false
-        });
-
-        // Enviar el formulario utilizando fetch
-        fetch(form.action, {
-          method: form.method,
-          body: new FormData(form)
-        }).then(function(response) {
-          if (response.ok) {
-            // Mostrar la alerta de éxito
-            Swal.fire({
-              title: 'Cotización Enviada',
-              text: 'Te contactaremos vía Whatsapp',
-              icon: 'success',
-              allowOutsideClick: false
-            }).then(function() {
-              // Reiniciar la página
-              location.reload();
-            });
-          } else {
-            throw new Error('Envio de formulario');
-          }
-        }).catch(function(error) {
-          // Mostrar la alerta de error
-          Swal.fire({
-            title: 'Cotización Enviada',
-              text: 'Te contactaremos vía Whatsapp',
-              icon: 'success',
-              allowOutsideClick: false
-          }).then(function() {
-            // Reiniciar la página cuando se cierre la alerta de error
-            location.reload();
-          });
-        }).finally(function() {
-          // Ocultar la alerta de carga
-          loadingAlert.close();
-        });
-      }
-    });
+    header.classList.remove("scrolled");
   }
 });
 
 
-//Funcion para desplegar los distintos checkboxes con otros servicios
+const menu = document.querySelector(".bars-menu")
 
-function toggleCheckboxes() {
-  var container = document.getElementById("checkboxContainer");
-  var isHidden = container.style.display === "none";
-  container.style.display = isHidden ? "block" : "none";
-  
-  var boton = document.getElementById("toggleButton");
-  boton.textContent = isHidden ? "Ocultar" : "Otros Servicios"; // Cambiar el texto del botón
-  
-  if (isHidden) {
-    Toastify({
-      text: "Se le enviará más información vía Whatsapp en caso de seleccionar otros servicios",
-      duration: 5500,
-      style: {
-        background: "#6c757d"
-      },
-      className: "alert-otros-servicios"
-    }).showToast();
-  }
+menu.addEventListener("click", animateBars);
+
+let line1 = document.querySelector(".line1_bars-menu");
+let line2 = document.querySelector(".line2_bars-menu")
+let line3 = document.querySelector(".line3_bars-menu")
+
+function animateBars() {
+    line1.classList.toggle("active_line1_bars-menu");
+    line2.classList.toggle("active_line2_bars-menu");
+    line3.classList.toggle("active_line3_bars-menu");
 }
 
+const sectionMenu = document.querySelector(".section-menu")
+const body = document.querySelector(".body")
+const paquetes = document.querySelector(".paquetes")
+const galeria = document.querySelector(".galeria")
+const contactanos = document.querySelector(".contactanos")
 
+    menu.addEventListener("click", () => {
+    sectionMenu.classList.toggle("nav-menu_visible")
+    body.classList.toggle("body-overflow_hidden")
+    });
 
+        paquetes.addEventListener("click", () => {
+        sectionMenu.classList.remove("nav-menu_visible")
+        body.classList.toggle("body-overflow_hidden")
+        animateBars()
+    });
+    
+        galeria.addEventListener("click", () => {
+        sectionMenu.classList.remove("nav-menu_visible")
+        body.classList.remove("body-overflow_hidden")
+        animateBars()
+    });
+    
+        contactanos.addEventListener("click", () => {
+        sectionMenu.classList.remove("nav-menu_visible")
+        body.classList.remove("body-overflow_hidden")
+        animateBars()
+    });
+
+        if (sectionMenu.classList.contains("nav-menu_visible")) {
+            menu.setAttribute("aria-label", "Cerrar menu");
+        } else {
+            menu.setAttribute("aria-label", "Abrir menu");
+        }
+
+        // const slides = document.querySelectorAll('.slide');
+        // let currentSlide = 0;
+        // let intervalId;
+        
+        // function showSlide(index) {
+        //   slides[currentSlide].className = 'slide';
+        //   currentSlide = (index + slides.length) % slides.length;
+        //   slides[currentSlide].className = 'slide active';
+        // }
+        
+        // function nextSlide() {
+        //   showSlide(currentSlide + 1);
+        // }
+        
+        // function prevSlide() {
+        //   showSlide(currentSlide - 1);
+        // }
+        
+        // document.getElementById('nextBtn').addEventListener('click', () => {
+        //   clearInterval(intervalId);
+        //   nextSlide();
+        // });
+        
+        // document.getElementById('prevBtn').addEventListener('click', () => {
+        //   clearInterval(intervalId);
+        //   prevSlide();
+        // });
+        
+        // intervalId = setInterval(nextSlide, 2000);
+        

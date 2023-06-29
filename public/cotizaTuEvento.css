@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: 'Lora', serif;
+    font-family: 'Spline Sans Mono', monospace;
     background-image: url("jardinImg6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,6 +47,7 @@ header {
 }
 
 .section-title .title {
+    font-family: 'Elsie', cursive;
     font-size: 3.8rem;
     color: aliceblue;
 }
