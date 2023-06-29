@@ -138,7 +138,7 @@ input[type=number] { appearance:textfield; }
 .container .buttons .botonCalcular {
     width: 200px;
     height: 50px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-left: -20px;
     background-color: rgb(48, 25, 0);
     color: whitesmoke;
@@ -147,7 +147,7 @@ input[type=number] { appearance:textfield; }
 .container .buttons .botonEnviar {
     width: 200px;
     height: 50px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-left: 200px;
     background-color: black;
     color: whitesmoke;
