@@ -143,6 +143,10 @@
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+
+    main .container-memories .memories img {
+        aspect-ratio: 2/1.4;
+    }
     
     main .container-experience {
         height: 100%;
