@@ -186,13 +186,18 @@
     }
     
     #footer {
-        padding: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         padding-top: 4rem;
         padding-bottom: 4rem;
         gap: 2rem;
         display: grid;
         grid-template-columns: 1fr;
         margin-top: 7rem;
+    }
+
+    footer .section-mid {
+        padding: 0;
     }
     
     footer .section-right .redes-sociales {
