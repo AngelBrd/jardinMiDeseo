@@ -141,7 +141,7 @@ function calcularTotal() {
   var total = parseInt(precioPaquete) + parseInt(precioHorasExtra);
 
   Swal.fire({
-    title: "El total de su cotización es de $" + total,
+    title: "El total de su cotización es de $" + total + "\n (No se incluye costo de servicios adicionales)",
     customClass: {
       confirmButton: "boton-alerta-total"
     },
