@@ -99,10 +99,10 @@ function llenarPrecioHorasExtra(seleccion) {
 
   const precios = {
     '0': 0,
-    '1': 200,
-    '2': 400,
-    '3': 600,
-    '4': 800
+    '1': 800,
+    '2': 1600,
+    '3': 2400,
+    '4': 3200
   };
 
   precioHorasExtraInput.placeholder = seleccion ? "" : "Precio horas extra";
